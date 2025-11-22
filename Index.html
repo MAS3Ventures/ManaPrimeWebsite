@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana Prime: TCG Store</title>
+    <!-- Favicon Link Added -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- NEW FONT: Titillium Web -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            /* Set the new font family */
+            font-family: 'Titillium Web', sans-serif;
+            /* Change background to white/light grey */
+            background-color: #f7f7f7;
+            /* Change default text color to a dark color for contrast */
+            color: #1f2937;
         }
         .container {
             max-width: 1280px;
@@ -23,98 +29,117 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
+    <!--
+      IMPORTANT:
+      Copy the MailerLite universal tracking snippet and paste it here, just before the </head> tag.
+    -->
 </head>
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
                 <!-- 
-                    To fix the logo display issue, please replace the src URL below with a public URL to your Mana Prime logo.
-                    For example: <img src="https://your-domain.com/path-to-your-logo.jpg" alt="Mana Prime Logo" class="h-12 w-auto">
+                     Your Mana Prime Logo. Corrected to use the uppercase .JPG extension.
                 -->
-                <img src="2457edcc-d113-4804-bac2-57d8abc354d0-1_all_14.jpg" alt="Mana Prime Logo" class="h-40 w-auto">
+                <img src="2457edcc-d113-4804-bac2-57d8abc354d0-1_all_14.JPG" alt="Mana Prime Logo" class="h-24 w-auto">
             </a>
             <div class="space-x-4 hidden md:flex">
-                <a href="https://shop.tcgplayer.com/sellerfeedback/4712dcd5" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">Shop My Store</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+                <a href="https://manaprime.tcgplayer.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">Shop My Store</a>
+                <a href="#ebay-store" class="text-gray-700 hover:text-red-600 transition duration-300">eBay Store</a>
+                <a href="#contact" class="text-gray-700 hover:text-red-600 transition duration-300">Contact</a>
+                <a href="#mailing-list" class="text-gray-700 hover:text-red-600 transition duration-300">Join Mailing List</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
-            <a href="https://shop.tcgplayer.com/sellerfeedback/4712dcd5" target="_blank" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-white transition duration-300 text-center mx-4 my-2 rounded-full">Shop My Store</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800 transition duration-300">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t border-gray-200">
+            <a href="https://manaprime.tcgplayer.com" target="_blank" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-white transition duration-300 text-center mx-4 my-2 rounded-full">Shop My Store</a>
+            <a href="#ebay-store" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">eBay Store</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">Contact</a>
+            <a href="#mailing-list" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">Join Mailing List</a>
         </div>
     </header>
 
     <main class="py-12">
         <!-- Hero Section -->
         <section class="container mx-auto px-4 text-center mb-16">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Your Gateway to Trading Card Games</h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">Your Gateway to Collectible Card Games</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">
                 Explore a vast collection of rare cards, booster packs, and accessories for your favorite trading card games.
             </p>
-            <a href="https://shop.tcgplayer.com/sellerfeedback/4712dcd5" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+            <a href="https://manaprime.tcgplayer.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                 Start Your Quest
             </a>
         </section>
 
-        <!-- Products Section is removed as it's no longer needed, redirecting to TCGPlayer -->
+        <!-- TCGPlayer Section -->
         <section id="products" class="container mx-auto px-4 py-8">
-            <div class="text-center bg-gray-800 rounded-xl p-8 card-shadow">
-                <h2 class="text-4xl font-bold text-white mb-4">Shop Our Collection on TCGplayer</h2>
-                <p class="text-gray-400 mb-6 text-lg">
+            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Shop Our Collection on TCGplayer</h2>
+                <p class="text-gray-600 mb-6 text-lg">
                     We've moved our storefront to TCGplayer.com to give you a seamless shopping experience. Click the button below to browse our full inventory of single cards, sealed products, and more!
                 </p>
-                <a href="https://shop.tcgplayer.com/sellerfeedback/4712dcd5" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+                <a href="https://manaprime.tcgplayer.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                     Shop Now on TCGplayer
                 </a>
             </div>
         </section>
-        
-<!-- eBay Store Section -->
+
+        <!-- eBay Store Section -->
         <section id="ebay-store" class="container mx-auto px-4 py-8 mt-16">
-            <div class="text-center bg-gray-800 rounded-xl p-8 card-shadow">
-                <h2 class="text-4xl font-bold text-white mb-4">Find Our Listings on eBay</h2>
-                <p class="text-gray-400 mb-6 text-lg">
-                    Looking for more? You can also find our auctions and unique listings on eBay. Visit our eBay store to find a great deal on your next card!
+            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-gray-200">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Find Our Listings on eBay</h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Looking for more? You can also find our auctions and unique listings on eBay.
                 </p>
                 <!-- IMPORTANT: Replace the placeholder URL with your actual eBay store URL. -->
-                <a href="https://www.ebay.com/usr/manaprime" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+                <a href="https://www.ebay.com/usr/YOUR-EBAY-USERNAME" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                     Browse Our eBay Store
                 </a>
             </div>
         </section>
-        
+
+        <!-- Mailing List Signup Section -->
+        <section id="mailing-list" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-gray-200">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">Join Our Mailing List</h2>
+            <p class="text-gray-600 text-center mb-6 text-lg">
+                Be the first to know about new arrivals, special promotions, and exclusive drops.
+            </p>
+            <!--
+              IMPORTANT:
+              Copy and paste the MailerLite form HTML code here.
+            -->
+        </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="container mx-auto px-4 py-8 mt-16 bg-gray-800 rounded-xl card-shadow p-8">
-            <h2 class="text-4xl font-bold text-white text-center mb-8">Contact Us</h2>
+        <section id="contact" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-gray-200">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">Contact Us</h2>
             <!--
                 IMPORTANT: To make this form work, you must set up an account with Formspree.
                 1. Go to https://formspree.io/ and create a new form.
                 2. Copy the unique endpoint URL they provide (it will look something like this: https://formspree.io/f/xxxxxxxx).
                 3. Replace the placeholder 'YOUR_FORMSPREE_ENDPOINT' in the action attribute below with your unique URL.
             -->
-            <form action="https://formspree.io/f/xvgwowaj" method="POST" class="max-w-xl mx-auto space-y-4">
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="max-w-xl mx-auto space-y-4">
                 <input type="hidden" name="_subject" value="New Website Submission">
                 <div>
-                    <label for="name" class="block text-gray-400 mb-1">Name</label>
-                    <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-red-600">
+                    <label for="name" class="block text-gray-700 mb-1">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-red-600">
                 </div>
                 <div>
-                    <label for="email" class="block text-gray-400 mb-1">Email</label>
-                    <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-red-600">
+                    <label for="email" class="block text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-red-600">
                 </div>
                 <div>
-                    <label for="message" class="block text-gray-400 mb-1">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-red-600"></textarea>
+                    <label for="message" class="block text-gray-700 mb-1">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-red-600"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-full transition duration-300 transform hover:scale-105">
                     Send Message
@@ -124,8 +149,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-center py-6 mt-16">
-        <p class="text-gray-400">&copy; 2025 MAS3 Ventures LLC / All Rights Reserved</p>
+    <footer class="bg-gray-200 text-center py-6 mt-16">
+        <p class="text-gray-700">&copy; 2025 Mana Prime. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -157,4 +182,5 @@
 
 </body>
 </html>
+
 

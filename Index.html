@@ -29,10 +29,15 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
-    <!--
-      IMPORTANT:
-      Copy the MailerLite universal tracking snippet and paste it here, just before the </head> tag.
-    -->
+    <!-- MailerLite Universal Script (Snippet 1) -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1814481');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body class="antialiased">
 
@@ -41,7 +46,7 @@
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
                 <!-- 
-                     Your Mana Prime Logo. Corrected to use the uppercase .JPG extension.
+                     Mana Prime Logo: Corrected to use the uppercase .JPG extension as provided by the user.
                 -->
                 <img src="2457edcc-d113-4804-bac2-57d8abc354d0-1_all_14.JPG" alt="Mana Prime Logo" class="h-24 w-auto">
             </a>
@@ -74,7 +79,7 @@
             <p class="text-xl md:text-2xl text-gray-600 mb-8">
                 Explore a vast collection of rare cards, booster packs, and accessories for your favorite trading card games.
             </p>
-            <!-- Removed 'Start Your Quest' link to eliminate redundancy -->
+            <!-- TCGPlayer link removed from hero section per user request -->
         </section>
 
         <!-- TCGPlayer Section -->
@@ -84,7 +89,7 @@
                 <p class="text-gray-600 mb-6 text-lg">
                     We've moved our storefront to TCGplayer.com to give you a seamless shopping experience. Click the button below to browse our full inventory of single cards, sealed products, and more!
                 </p>
-                <!-- Updated link to new TCGplayer URL -->
+                <!-- Updated link to TCGPlayer Pro URL -->
                 <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                     Shop Now on TCGplayer
                 </a>
@@ -98,8 +103,8 @@
                 <p class="text-gray-600 mb-6 text-lg">
                     Looking for more? You can also find our auctions and unique listings on eBay.
                 </p>
-                <!-- IMPORTANT: Replace the placeholder URL with your actual eBay store URL. -->
-                <a href="https://www.ebay.com/usr/manaprime" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+                <!-- eBay Button -->
+                <a href="https://www.ebay.com/usr/YOUR-EBAY-USERNAME" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                     Browse Our eBay Store
                 </a>
             </div>
@@ -111,10 +116,8 @@
             <p class="text-gray-600 text-center mb-6 text-lg">
                 Be the first to know about new arrivals, special promotions, and exclusive drops.
             </p>
-            <!--
-              IMPORTANT:
-              Copy and paste the MailerLite form HTML code here.
-            -->
+            <!-- MailerLite Form Display Code (Snippet 2) -->
+            <div class="ml-embedded" data-form="2Z1zCx"></div>
         </section>
 
         <!-- Contact Section -->
@@ -181,5 +184,3 @@
 
 </body>
 </html>
-
-

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mana Prime: TCG Store</title>
+    <title>Mana Prime: Holiday TCG Store</title>
     <!-- Favicon Link Added -->
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- NEW FONT: Titillium Web -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <!-- NEW FONTS: Titillium Web (Main) and Great Vibes (Festive Accent) -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Set the new font family */
+            /* Set the main font family */
             font-family: 'Titillium Web', sans-serif;
-            /* Change background to white/light grey */
-            background-color: #f7f7f7;
-            /* Change default text color to a dark color for contrast */
+            /* Changed from pure white to a warm, soft holiday background */
+            background-color: #fcfcf9; 
+            /* Dark text color for contrast */
             color: #1f2937;
         }
         .container {
@@ -26,7 +26,39 @@
             margin-right: auto;
         }
         .card-shadow {
+            /* Kept the standard shadow, can add a slight festive gold shimmer if desired */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .festive-title {
+            /* Use a cursive font for the main headline for a celebratory feel */
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- SNOWFLAKE CSS --- */
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            animation-name: fall, sway;
+            animation-iteration-count: infinite, infinite;
+            animation-timing-function: linear;
+            z-index: 1000;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh); opacity: 0.8; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        @keyframes sway {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
         }
     </style>
     <!-- MailerLite Universal Script (Snippet 1) -->
@@ -45,16 +77,14 @@
     <header class="bg-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
-                <!-- 
-                     Mana Prime Logo: Corrected to use the uppercase .JPG extension as provided by the user.
-                -->
+                <!-- Mana Prime Logo: Corrected to use the uppercase .JPG extension -->
                 <img src="2457edcc-d113-4804-bac2-57d8abc354d0-1_all_14.JPG" alt="Mana Prime Logo" class="h-24 w-auto">
             </a>
             <div class="space-x-4 hidden md:flex">
-                <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">Shop My Store</a>
-                <a href="#ebay-store" class="text-gray-700 hover:text-red-600 transition duration-300">eBay Store</a>
+                <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">Holiday Shop</a>
+                <a href="#ebay-store" class="text-emerald-600 hover:text-red-600 transition duration-300">eBay Deals</a>
                 <a href="#contact" class="text-gray-700 hover:text-red-600 transition duration-300">Contact</a>
-                <a href="#mailing-list" class="text-gray-700 hover:text-red-600 transition duration-300">Join Mailing List</a>
+                <a href="#mailing-list" class="text-gray-700 hover:text-red-600 transition duration-300">New Year List</a>
             </div>
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
@@ -65,64 +95,66 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t border-gray-200">
-            <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-white transition duration-300 text-center mx-4 my-2 rounded-full">Shop My Store</a>
-            <a href="#ebay-store" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">eBay Store</a>
+            <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-white transition duration-300 text-center mx-4 my-2 rounded-full">Holiday Shop</a>
+            <a href="#ebay-store" class="block py-2 px-4 text-sm text-emerald-600 hover:bg-gray-200 transition duration-300">eBay Deals</a>
             <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">Contact</a>
-            <a href="#mailing-list" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">Join Mailing List</a>
+            <a href="#mailing-list" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">New Year List</a>
         </div>
     </header>
 
     <main class="py-12">
         <!-- Hero Section -->
         <section class="container mx-auto px-4 text-center mb-16">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">Your Gateway to Collectible Card Games</h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8">
-                Explore a vast collection of rare cards, booster packs, and accessories for your favorite trading card games.
+            <h1 class="text-6xl md:text-7xl font-extrabold text-red-600 mb-4 leading-tight festive-title">Happy Holidays from Mana Prime!</h1>
+            <p class="text-xl md:text-2xl text-emerald-600 font-bold mb-8">
+                Your Gateway to Collectible Card Games
             </p>
-            <!-- TCGPlayer link removed from hero section per user request -->
+            <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+                Shop Holiday Deals
+            </a>
         </section>
 
         <!-- TCGPlayer Section -->
         <section id="products" class="container mx-auto px-4 py-8">
-            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-gray-200">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Shop Our Collection on TCGplayer</h2>
+            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-red-200 border-4">
+                <h2 class="text-4xl font-bold text-red-600 mb-4">Find the Perfect Gift on TCGplayer</h2>
                 <p class="text-gray-600 mb-6 text-lg">
-                    We've moved our storefront to TCGplayer.com to give you a seamless shopping experience. Click the button below to browse our full inventory of single cards, sealed products, and more!
+                    Treat the collector in your life! Our full inventory of singles and sealed product is waiting for you at our TCGplayer Pro Store.
                 </p>
                 <!-- Updated link to TCGPlayer Pro URL -->
                 <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
-                    Shop Now on TCGplayer
+                    Shop Our Holiday Inventory
                 </a>
             </div>
         </section>
 
         <!-- eBay Store Section -->
         <section id="ebay-store" class="container mx-auto px-4 py-8 mt-16">
-            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-gray-200">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Find Our Listings on eBay</h2>
+            <div class="text-center bg-white rounded-xl p-8 card-shadow border border-emerald-200 border-4">
+                <h2 class="text-4xl font-bold text-emerald-600 mb-4">Limited Auctions & Rare Finds on eBay</h2>
                 <p class="text-gray-600 mb-6 text-lg">
-                    Looking for more? You can also find our auctions and unique listings on eBay.
+                    Check our eBay listings daily for last-minute deals, rare cards, and special holiday auctions you won't find anywhere else.
                 </p>
                 <!-- eBay Button -->
-                <a href="https://www.ebay.com/usr/manaprime" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
-                    Browse Our eBay Store
+                <a href="https://www.ebay.com/usr/manaprime" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
+                    Browse eBay Auctions
                 </a>
             </div>
         </section>
 
         <!-- Mailing List Signup Section -->
-        <section id="mailing-list" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-gray-200">
-            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">Join Our Mailing List</h2>
+        <section id="mailing-list" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-red-200">
+            <h2 class="text-4xl font-bold text-red-600 text-center mb-8">Join Our New Year List</h2>
             <p class="text-gray-600 text-center mb-6 text-lg">
-                Be the first to know about new arrivals, special promotions, and exclusive drops.
+                Be the first to know about upcoming sales, new year drops, and collector events!
             </p>
             <!-- MailerLite Form Display Code (Snippet 2) -->
             <div class="ml-embedded" data-form="2Z1zCx"></div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-gray-200">
-            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">Contact Us</h2>
+        <section id="contact" class="container mx-auto px-4 py-8 mt-16 bg-white rounded-xl card-shadow p-8 border border-emerald-200">
+            <h2 class="text-4xl font-bold text-emerald-600 text-center mb-8">Contact Our Team</h2>
             <!--
                 IMPORTANT: To make this form work, you must set up an account with Formspree.
                 1. Go to https://formspree.io/ and create a new form.
@@ -130,7 +162,7 @@
                 3. Replace the placeholder 'YOUR_FORMSPREE_ENDPOINT' in the action attribute below with your unique URL.
             -->
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="max-w-xl mx-auto space-y-4">
-                <input type="hidden" name="_subject" value="New Website Submission">
+                <input type="hidden" name="_subject" value="Holiday Website Submission">
                 <div>
                     <label for="name" class="block text-gray-700 mb-1">Name</label>
                     <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-red-600">
@@ -144,7 +176,7 @@
                     <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:outline-none focus:border-red-600"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-full transition duration-300 transform hover:scale-105">
-                    Send Message
+                    Send Holiday Message
                 </button>
             </form>
         </section>
@@ -152,10 +184,41 @@
 
     <!-- Footer -->
     <footer class="bg-gray-200 text-center py-6 mt-16">
-        <p class="text-gray-700">&copy; 2025 Mana Prime. All Rights Reserved.</p>
+        <p class="text-gray-700">&copy; 2025 Mana Prime. Happy Holidays!</p>
     </footer>
 
     <script>
+        // --- SNOWFLAKE GENERATION SCRIPT ---
+        const snowflakeContainer = document.body;
+        const numberOfSnowflakes = 40; 
+        const maxAnimationDuration = 15; // seconds
+        const maxSwayDuration = 8; // seconds
+
+        for (let i = 0; i < numberOfSnowflakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            
+            // Randomize starting position (x-axis)
+            const startX = Math.random() * 100;
+            snowflake.style.left = `${startX}vw`;
+            
+            // Randomize size
+            const size = Math.random() * 5 + 5; // 5px to 10px
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+
+            // Randomize falling speed (duration) and delay
+            const duration = Math.random() * maxAnimationDuration + 5; // 5s to 20s
+            const delay = Math.random() * maxAnimationDuration; // Start time offset
+
+            snowflake.style.animationDuration = `${duration}s, ${Math.random() * maxSwayDuration + 3}s`;
+            snowflake.style.animationDelay = `${delay}s, ${Math.random() * 3}s`;
+            
+            // Randomize sway amplitude by changing the sway duration (second duration in the animation-duration property)
+            
+            snowflakeContainer.appendChild(snowflake);
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -184,3 +247,4 @@
 
 </body>
 </html>
+

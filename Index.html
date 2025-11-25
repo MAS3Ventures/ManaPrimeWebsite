@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana Prime: Holiday TCG Store</title>
-    <!-- Favicon Link Added -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- FAVICON UPDATE: Using the pixel art logo file name you specified -->
+    <link rel="icon" type="image/png" href="IMG_0099.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,16 +77,21 @@
     <header class="bg-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
-                <!-- 
-                     HOLIDAY LOGO UPDATE: Source changed to the new file: IMG_0097.jpeg
-                -->
+                <!-- HOLIDAY LOGO SOURCE -->
                 <img src="IMG_0097.jpeg" alt="Mana Prime Holiday Logo" class="h-24 w-auto">
             </a>
-            <div class="space-x-4 hidden md:flex">
+            <div class="space-x-4 hidden md:flex items-center">
                 <a href="http://manaprime.tcgplayerpro.com" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">Holiday Shop</a>
                 <a href="#ebay-store" class="text-emerald-600 hover:text-red-600 transition duration-300">eBay Deals</a>
                 <a href="#contact" class="text-gray-700 hover:text-red-600 transition duration-300">Contact</a>
                 <a href="#mailing-list" class="text-gray-700 hover:text-red-600 transition duration-300">New Year List</a>
+                
+                <!-- Instagram Link in Desktop Nav -->
+                <a href="https://www.instagram.com/manaprimetcg/" target="_blank" aria-label="Follow us on Instagram" class="text-red-600 hover:text-emerald-600 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2.8A3.2 3.2 0 0 0 4.6 7.6v8.8c0 1.76 1.44 3.2 3.2 3.2h8.8c1.76 0 3.2-1.44 3.2-3.2V7.6a3.2 3.2 0 0 0-3.2-3.2H7.6m4.6 1.4a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8m0 1.9c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m4.2-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </a>
             </div>
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
@@ -101,6 +106,15 @@
             <a href="#ebay-store" class="block py-2 px-4 text-sm text-emerald-600 hover:bg-gray-200 transition duration-300">eBay Deals</a>
             <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">Contact</a>
             <a href="#mailing-list" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 transition duration-300">New Year List</a>
+             <!-- Instagram Link in Mobile Nav -->
+            <a href="https://www.instagram.com/manaprimetcg/" target="_blank" aria-label="Follow us on Instagram" class="block py-2 px-4 text-sm text-red-600 hover:bg-gray-200 transition duration-300 text-center">
+                 <span class="inline-block align-middle mr-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2.8A3.2 3.2 0 0 0 4.6 7.6v8.8c0 1.76 1.44 3.2 3.2 3.2h8.8c1.76 0 3.2-1.44 3.2-3.2V7.6a3.2 3.2 0 0 0-3.2-3.2H7.6m4.6 1.4a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8m0 1.9c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m4.2-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </span>
+                <span class="align-middle">Follow us on Instagram</span>
+            </a>
         </div>
     </header>
 
@@ -186,6 +200,26 @@
 
     <!-- Footer -->
     <footer class="bg-gray-200 text-center py-6 mt-16">
+        <div class="flex justify-center space-x-6 mb-4">
+            <!-- Instagram Link in Footer -->
+            <a href="https://www.instagram.com/manaprimetcg/" target="_blank" aria-label="Follow us on Instagram" class="text-red-600 hover:text-emerald-600 transition duration-300">
+                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2.8A3.2 3.2 0 0 0 4.6 7.6v8.8c0 1.76 1.44 3.2 3.2 3.2h8.8c1.76 0 3.2-1.44 3.2-3.2V7.6a3.2 3.2 0 0 0-3.2-3.2H7.6m4.6 1.4a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8m0 1.9c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m4.2-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+            </a>
+            <!-- TCGPlayer Link -->
+            <a href="http://manaprime.tcgplayerpro.com" target="_blank" aria-label="Shop on TCGplayer" class="text-red-600 hover:text-emerald-600 transition duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1.75 14.5h-3.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h3.5c.414 0 .75.336.75.75s-.336.75-.75.75zM12 4.5c3.03 0 5.5 2.24 5.5 5.5s-2.47 5.5-5.5 5.5S6.5 13.03 6.5 10s2.47-5.5 5.5-5.5zm0-1.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5-3.358-7.5-7.5-7.5zM12 7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S13.38 7 12 7z"/>
+                </svg>
+            </a>
+            <!-- eBay Link -->
+            <a href="https://www.ebay.com/usr/manaprime" target="_blank" aria-label="Shop on eBay" class="text-red-600 hover:text-emerald-600 transition duration-300">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.33 11.53c-.35 0-.6-.17-.6-.53V9.12c0-.36.25-.53.6-.53s.6.17.6.53v.97h.03c.5-.72.82-1.63.82-2.67 0-2.44-1.92-4.52-4.83-4.52-1.96 0-3.64 1.1-4.4 2.8H7.13c-.35 0-.6.17-.6.53s.25.53.6.53h.03c.67-1.12 1.6-1.7 2.76-1.7 1.48 0 2.27.9 2.27 2.2 0 1.05-.3 1.9-.86 2.66h-.03v.2c0 .36-.25.53-.6.53s-.6-.17-.6-.53v-.93c0-.36-.25-.53-.6-.53s-.6.17-.6.53v1.8c0 1.2.78 2.05 2.27 2.05 1.16 0 2.1-.58 2.76-1.7h.03v.97c0 .36-.25.53-.6.53s-.6-.17-.6-.53v-.97h-.03c-.5.72-.82 1.63-.82 2.67 0 2.44 1.92 4.52 4.83 4.52 1.96 0 3.64-1.1 4.4-2.8h.03c.35 0 .6-.17.6-.53s-.25-.53-.6-.53h-.03c-.67 1.12-1.6 1.7-2.76 1.7-1.48 0-2.27-.9-2.27-2.2 0-1.05.3-1.9.86-2.66z"/>
+                </svg>
+            </a>
+        </div>
         <p class="text-gray-700">&copy; 2025 Mana Prime. Happy Holidays!</p>
     </footer>
 
@@ -249,4 +283,3 @@
 
 </body>
 </html>
-
